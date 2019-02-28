@@ -3,18 +3,47 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>jQuery template</title>
+  <title>Generator Project</title>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-
+<style>
+p {
+ 
+  width: 300px;
+  border: 25px ;
+  padding: 25px;
+  margin: 25px;
+}
+</style>
   <script>
     //my own jQuery/JavaScript
     $(function() {
-      //code goes here
+      
+      $('button').click(function() {
+        var name = $('#name').val()
+        var age = $('#age').val()
+        var color1 = $('#color1').val()
+        var color2 = $('#color2').val()
+        var msg = "Dear " + name + ", <br>" 
+        var msg2 ="Happy " + age + 'Birthday!!'
+        var color2 = $('#color2').val();
+        $('msg').css('border-color', color2)
+        $('p').html(msg + msg2)
+        console.log(msg + msg2)
+      });
     });
   </script>
+  
 </head>
 
 <body>
+  Name: <input id="name"><br> 
+  Age: <input id="age"><br> 
+  Favorite Color: <input id="color1"><br> 
+  Border Color: <input id="color2"><br> 
+  <button>Create Card!</button>
+
+
+  <p></p>
 
 </body>
 
